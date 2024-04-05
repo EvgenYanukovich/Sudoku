@@ -122,3 +122,17 @@ button:hover {
 .flash-green {
     animation: flash-green 1s infinite;
 }
+
+@media (max-width: 600px) {
+    .table-cont {
+        margin: 10px auto;
+    }
+    td {
+        width: 30px;
+        height: 30px;
+    }
+    button {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}

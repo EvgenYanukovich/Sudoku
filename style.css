@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.table-cont {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+}
+
+td.no-active {
+    background-color: #fff;
+}
+
+td.active {
+    background-color: #f0f0f0;
+}
+
+td.pass-active {
+    background-color: #f8cecc;
+    /* Цвет для подсветки строки и столбца */
+}
+
+td.pass-num-active {
+    background-color: #ffeb3b;
+    /* Цвет для подсветки ячеек с таким же числом */
+}
+
+
+/* Добавляем жирные границы между боксами */
+
+td {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+td:nth-child(3n) {
+    border-right: 3px solid #000;
+    /* Жирная правая граница */
+}
+
+td:nth-child(3n + 1) {
+    border-left: 3px solid #000;
+    /* Жирная левая граница */
+}
+
+tr:nth-child(3n) td {
+    border-bottom: 3px solid #000;
+    /* Жирная нижняя граница */
+}
+
+tr:nth-child(3n + 1) td {
+    border-top: 3px solid #000;
+    /* Жирная верхняя граница */
+}
+
+.btn-cont {
+    margin: 20px auto;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@keyframes flash-red {
+    0% {
+        background-color: inherit;
+    }
+    50% {
+        background-color: #f8cecc;
+        /* Цвет для подсветки неверных ячеек */
+    }
+    100% {
+        background-color: inherit;
+    }
+}
+
+.flash-red {
+    animation: flash-red 1s infinite;
+}
+
+@keyframes flash-green {
+    0% {
+        background-color: inherit;
+    }
+    50% {
+        background-color: #cef8cc;
+        /* Цвет для подсветки верных ячеек */
+    }
+    100% {
+        background-color: inherit;
+    }
+}
+
+.flash-green {
+    animation: flash-green 1s infinite;
+}

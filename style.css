@@ -33,16 +33,11 @@ td.active {
 
 td.pass-active {
     background-color: #f8cecc;
-    /* Цвет для подсветки строки и столбца */
 }
 
 td.pass-num-active {
     background-color: #ffeb3b;
-    /* Цвет для подсветки ячеек с таким же числом */
 }
-
-
-/* Добавляем жирные границы между боксами */
 
 td {
     border-top: 1px solid #ccc;
@@ -51,22 +46,18 @@ td {
 
 td:nth-child(3n) {
     border-right: 3px solid #000;
-    /* Жирная правая граница */
 }
 
 td:nth-child(3n + 1) {
     border-left: 3px solid #000;
-    /* Жирная левая граница */
 }
 
 tr:nth-child(3n) td {
     border-bottom: 3px solid #000;
-    /* Жирная нижняя граница */
 }
 
 tr:nth-child(3n + 1) td {
     border-top: 3px solid #000;
-    /* Жирная верхняя граница */
 }
 
 .btn-cont {
@@ -89,13 +80,67 @@ button:hover {
     background-color: #0056b3;
 }
 
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-content {
+    margin-bottom: 20px;
+}
+
+.modal-image {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.modal-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.modal-button:hover {
+    background-color: #0056b3;
+}
+
 @keyframes flash-red {
     0% {
         background-color: inherit;
     }
     50% {
         background-color: #f8cecc;
-        /* Цвет для подсветки неверных ячеек */
     }
     100% {
         background-color: inherit;
@@ -112,7 +157,6 @@ button:hover {
     }
     50% {
         background-color: #cef8cc;
-        /* Цвет для подсветки верных ячеек */
     }
     100% {
         background-color: inherit;
